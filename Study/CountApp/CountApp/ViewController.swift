@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         customLabel.translatesAutoresizingMaskIntoConstraints = false
         // 제약조건 세팅 (가로세로 중앙정렬)
         customLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        customLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        customLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 50).isActive = true
         
         self.view.addSubview(customButton)
         customButton.translatesAutoresizingMaskIntoConstraints = false
@@ -68,5 +68,9 @@ class ViewController: UIViewController {
     
     @objc func click() {
         print("clicked")
+        
+        // nextView with code
+        let SecondVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC")
+        navigationController?.pushViewController(SecondVC!, animated: true)
     }
 }
