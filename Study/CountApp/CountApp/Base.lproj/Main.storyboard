@@ -9,35 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="g47-8N-eWh">
-            <objects>
-                <tableViewController id="Db5-iW-CJZ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="XgQ-tT-mkZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mxH-TX-1tj">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mxH-TX-1tj" id="K0d-fO-Uaq">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Db5-iW-CJZ" id="nW5-3w-qFD"/>
-                            <outlet property="delegate" destination="Db5-iW-CJZ" id="8hG-4j-TyC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Nmi-IZ-RXx"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H3U-f7-h3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1017" y="77"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="tZt-WH-I9P">
             <objects>
@@ -47,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Db5-iW-CJZ" kind="relationship" relationship="rootViewController" id="MgW-Qs-U1M"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vPJ-uo-vsY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyQ-yn-6qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -63,13 +34,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmm-TA-IFT">
-                                <rect key="frame" x="176" y="344" width="62" height="36"/>
+                                <rect key="frame" x="176" y="388" width="62" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0J-5j-luv">
-                                <rect key="frame" x="40" y="344" width="50" height="50"/>
+                                <rect key="frame" x="40" y="388" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UZy-lo-JBn"/>
                                     <constraint firstAttribute="width" constant="50" id="W0f-GR-YTb"/>
@@ -83,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HP5-Vm-oue">
-                                <rect key="frame" x="324" y="344" width="50" height="50"/>
+                                <rect key="frame" x="324" y="388" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lnk-cI-ECy"/>
                                     <constraint firstAttribute="width" constant="50" id="pas-TC-t7d"/>
@@ -104,7 +75,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="qxg-vU-fOC" kind="presentation" modalPresentationStyle="fullScreen" id="2sP-rL-pNG"/>
+                                    <segue destination="qxg-vU-fOC" kind="show" id="Qnd-qk-RlT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,24 +92,25 @@
                             <constraint firstItem="HP5-Vm-oue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="x2X-GB-1Uf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3mj-Zi-tC9"/>
                     <connections>
                         <outlet property="countLabel" destination="Cmm-TA-IFT" id="PvM-Hl-lVr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="74"/>
+            <point key="canvasLocation" x="-1043" y="76"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GpA-hP-utb">
             <objects>
-                <viewController id="qxg-vU-fOC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="qxg-vU-fOC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NaM-Sb-IDD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두번째 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czo-eu-jmk">
-                                <rect key="frame" x="139" y="435" width="136.5" height="36"/>
+                                <rect key="frame" x="139" y="457" width="136.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-uD-ZqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="75"/>
+            <point key="canvasLocation" x="-223" y="74"/>
         </scene>
     </scenes>
     <resources>
