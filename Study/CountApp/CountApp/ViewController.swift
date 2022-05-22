@@ -70,7 +70,9 @@ class ViewController: UIViewController {
         print("clicked")
         
         // nextView with code
-        let SecondVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC")
+        let SecondVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC") as? SecondViewController
+        
+        SecondVC?.getCount = count
         navigationController?.pushViewController(SecondVC!, animated: true)
     }
 }
